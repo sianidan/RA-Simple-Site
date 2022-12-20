@@ -1,0 +1,214 @@
+/***** BASE STYLES *****/
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     font-size: 16px;
+     font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+     font-weight: 300;
+}
+
+a {
+     text-decoration: none;
+}
+
+/***** HEADER *****/
+
+.navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+     background: antiquewhite;
+}
+
+.header .logo {
+     height: 15vh;
+     padding-top: 1%;
+}
+
+h1 {
+     color: rgb(10, 33, 97);
+     font-weight: 700;
+}
+
+.header .nav-left {
+     display: flex;
+     align-items: center;
+}
+
+nav ul.navLinks {
+    display: flex; 
+    list-style-type: none;
+}
+
+.navLinks a {
+     padding: 1em;
+     color: rgb(10, 33, 97);
+}
+
+.navIcons span {
+     padding: 1em;
+}
+
+/***** PARALLAX *****/
+.container {
+     background-image: url(../Images/background.jpeg);
+     background-size: cover;
+     background-position-y: -200px;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     padding-bottom: 20vh;
+}
+
+/***** LANDING *****/
+.landing h1, .landing h3, .landing p {
+     color: antiquewhite;
+}
+
+.landing {
+     height: 150vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     position: relative;
+}
+
+.landing .text1 {
+     text-align: center;
+     font-size: 3em;
+     text-shadow: 2px 8px 15px black;
+     padding-top: 20vh;
+}
+
+.landing .text2 {
+     background-color: rgba(28, 41, 101, 0.8);
+     height: 40vh;
+     width: 75%;
+     border-radius: 0.5rem;
+     box-shadow: 0px 5px 20px rgb(10, 33, 97);
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     padding: 0 5rem;
+}
+
+.text2 h3 {
+     font-size: 3rem;
+}
+
+.text2 p {
+     width: 50%;
+     font-size: 1.5rem;
+}
+
+/***** GRID ITEMS *****/
+.grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
+     column-gap: 4em;
+     row-gap: 5em;
+     width: 100%;
+     padding: 2em 5em;
+     margin-top: 50vh;
+}
+
+.card {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content:center;
+     position: relative;
+     padding: 1.5em;
+     background-color: antiquewhite;
+     border-radius: 0.5rem;
+}
+
+.card img {
+     width: 100%;
+}
+
+.hover-text {
+     /* Dimensions */
+     width: 100%;
+     height: 100%;
+     /* Position & Layout */
+     position: absolute;
+     top: 0;
+     left: 0;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 1em;
+     padding: 0 1em;
+     /* Colors */
+     background-color: rgba(0, 0, 0, .8);
+     border-radius: 0.5rem;
+     color: antiquewhite;
+     visibility: none; 
+     opacity: 0;
+     transition: 0.3s ease-in-out;
+}
+
+.hover-text a {
+     color: antiquewhite;
+}
+
+.hover-text a:hover {
+     text-decoration: underline;
+     color: rgb(207, 193, 175);
+}
+
+.card:hover .hover-text {
+     visibility: visible;
+     opacity: 1;
+}
+
+/* Active Grid */
+
+
+
+/***** FOOTER *****/
+footer {
+     height: 10vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     color: rgb(10, 33, 97);
+     bottom: 0;
+     background: antiquewhite;
+}
+
+footer a {
+     color: rgb(10, 33, 97);
+     font-weight: 500;
+}
+
+.btn {
+     padding: .5em;
+     cursor: pointer;
+     background: antiquewhite;
+     border: 1px solid rgb(10, 33, 97);
+     border-radius: .5em;
+     font-weight: 400;
+     vertical-align: middle;
+}
+
+.btn:hover {
+     background: rgb(186, 173, 156);
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.material-symbols-outlined {
+     cursor: pointer;
+}
